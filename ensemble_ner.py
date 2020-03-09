@@ -56,7 +56,7 @@ if __name__ == "__main__":
             logger.info("Model: {}".format(args['checkpoint_name']))
             logger.info("Config: {}".format(args))
 
-            model_path = os.path.join(conf.cp_root, args['checkpoint_name'], 'best.th')
+            model_path = os.path.join(conf.cp_root, args['checkpoint_name'], 'best.th')#
             logger.info('Building the model from:{}...'.format(model_path))
             model = torch.load(model_path, map_location=lambda storage, loc: storage)
             logger.info('Loading to GPU: {}'.format(gpu_index))
